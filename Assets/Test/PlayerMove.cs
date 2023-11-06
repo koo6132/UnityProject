@@ -19,20 +19,13 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.visible = false;
         rig = GetComponent<Rigidbody>();
         myT = GetComponent<Transform>();
         Isjump = false;
     }
-    private IEnumerator Start()
-    {
-        mspeed = 0;
-        yield return new WaitForSeconds(0.5f);
-        mspeed = 5000.0f;
-    }
+
     private void Update()
     {
-        
         if (Input.GetKeyDown(KeyCode.Space) && !Isjump)
         {
             rig.AddForce(new Vector3(0, jumpF, 0), ForceMode.Impulse);
