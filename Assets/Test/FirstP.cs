@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FirstP : MonoBehaviour
 {
+    public static FirstP instance;
     private Vector3 mymouce = Vector3.up;
     float mspeed;
     float mouseR;
@@ -15,22 +16,14 @@ public class FirstP : MonoBehaviour
     public float mouseSensitivity = 2f;
     public float maxLookAngle = 90f;
 
-    // Crosshair
-    public bool lockCursor = true;
-    public bool crosshair = true;
-    public Sprite crosshairImage;
-    public Color crosshairColor = Color.white;
-
     // Internal Variables
     private float yaw = 0.0f;
     private float pitch = 0.0f;
     // Start is called before the first frame update
-    void Awake()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+   
     private IEnumerator Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         mspeed = 0;
         yield return new WaitForSeconds(0.5f);
         mspeed = 5000.0f;
@@ -39,14 +32,7 @@ public class FirstP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            Cursor.visible = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            Cursor.visible = false;
-        }
+        
             transform.Rotate(mymouce * mspeed * Time.deltaTime * mouseR);
             mouseR = Input.GetAxis("Mouse X");
         if (cameraCanMove)

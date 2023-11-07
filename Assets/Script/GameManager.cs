@@ -5,14 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     bool isPause;
     public GameObject Canvas;
-    public GameManager instance;
+    public int Level;
+    public int stage;
+   
     void Awake()
     {
+        
         if (instance == null)
         {
-           
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -20,6 +23,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
     
+
 }

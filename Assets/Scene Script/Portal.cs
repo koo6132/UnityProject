@@ -5,16 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int stage;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            SceneManager.LoadScene(stage);
+            Debug.Log("³ª°¬½À´Ï´Ù");
+        }
         
     }
-    
 }
+

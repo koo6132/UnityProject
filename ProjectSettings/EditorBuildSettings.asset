@@ -26,7 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Option.unity
     guid: 11f292de4ea50764a86cdd2ed4e56c61
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ResultLose.unity
     guid: 7f6eccaa28e0b1746b92164cf16be8ad
+  - enabled: 1
+    path: Assets/Scenes/ResultWin.unity
+    guid: 325a163a21ab0604eaa672814b81a91b
   m_configObjects: {}

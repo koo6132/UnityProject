@@ -6,24 +6,37 @@ using UnityEngine.UI;
 
 public class Stage : MonoBehaviour
 {
-    private int clearedStage;
-    public Stage instance;
+    
+    public int clearedStage;
     public Image stageImage;
-    public Text stageNameText;
+    public Text stageNameText ;
     public Button startButton;
     [SerializeField]
     private string[] stageName = { "1", "2", "3", "4" };
-    public int index = 0;
-
-    private void Start()
+    public int index= 0;
+    public static Stage instance;
+    private void Awake()
     {
-        stageNameText = transform.Find("Stage").GetComponent<Text>();
+        if (PlayerPrefs.GetInt("PlayerStage") < 0 || PlayerPrefs.GetInt("PlayerStage") >4)
+        {
+            clearedStage = 0;
+            PlayerPrefs.SetInt("PlayerStage", 0);
+        }
+        else clearedStage = PlayerPrefs.GetInt("PlayerStage");
+    }
+
+
+private void Start()
+    {
+      
+         index = GameManager.instance.stage; 
+       stageNameText = transform.Find("Stage").GetComponent<Text>();
     }
     
     public void onClickNextStage()
     {
         index++;
-        if (index >= 4)
+        if (index >= stageName.Length)
         {
             index = 0;
         }
@@ -34,12 +47,21 @@ public class Stage : MonoBehaviour
         index--;
         if (index < 0)
         {
-            index = 0;
+            index =stageName.Length-1;
         }
     }
     private void Update()
     {
-        stageNameText.text = stageName[index];
+            stageNameText.text = stageName[index];
+        if (index > clearedStage)
+        {
+            startButton.interactable = false;
+        }
+        else
+        {
+            startButton.interactable = true;
+        }
+
     }
     public void onClickStartButton()
     {
@@ -47,6 +69,7 @@ public class Stage : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+        Resources.UnloadUnusedAssets();
         switch (index)
         {
             case 0:
@@ -66,5 +89,7 @@ public class Stage : MonoBehaviour
 
 
     }
+    
+
 
 }

@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
+    public static Pause instance;
+    public float mspeed;
     private bool isPause;
     public GameObject Canvas;
     public void Start()
     {
+        
         Canvas.SetActive(false);
     }
     public void Update()
@@ -22,16 +25,30 @@ public class Pause : MonoBehaviour
     }
     public void Re()
     {
+
+    if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            
+        }
         isPause = false;
         Time.timeScale = 1;
         Canvas.SetActive(false);
+       
     }
 
     public void stop()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            
+        }
         Time.timeScale = 0;
         Canvas.SetActive(true);
         isPause = true;
-
+        
     }
 }

@@ -19,6 +19,10 @@ public class Main: MonoBehaviour
     }
     public void OnRetry()
     {
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
         switch (index)
         {
             case 0:
@@ -38,6 +42,7 @@ public class Main: MonoBehaviour
     public void OnMain()
     {
         SceneManager.LoadScene("Main");
+        
     }
     public void OnChapter()
     {

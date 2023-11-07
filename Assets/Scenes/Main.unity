@@ -276,7 +276,6 @@ GameObject:
   m_Component:
   - component: {fileID: 320627666}
   - component: {fileID: 320627667}
-  - component: {fileID: 320627668}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -312,29 +311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 0}
-  instance: {fileID: 0}
---- !u!114 &320627668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320627665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec9b61d1d20ee0f46b808242a6d7e040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instance: {fileID: 0}
-  stageImage: {fileID: 0}
-  stageNameText: {fileID: 0}
-  startButton: {fileID: 0}
-  stageName:
-  - 1
-  - 2
-  - 3
-  - 4
-  index: 0
+  Level: 1
+  stage: 0
 --- !u!1 &484512535
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +522,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 484512537}
         m_TargetAssemblyTypeName: Main, Assembly-CSharp
-        m_MethodName: OnMain
+        m_MethodName: OnClickExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
