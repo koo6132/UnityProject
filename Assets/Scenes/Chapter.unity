@@ -565,7 +565,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 628302736}
-  - component: {fileID: 628302737}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -588,20 +587,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &628302737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628302734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0bce655fc7ddfc42bdb77ec12cc6462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Canvas: {fileID: 0}
-  stage: 0
 --- !u!1 &688213261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,7 +1267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec9b61d1d20ee0f46b808242a6d7e040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clearedStage: 0
   stageImage: {fileID: 0}
   stageNameText: {fileID: 1998695465}
   startButton: {fileID: 871685527}
@@ -1292,6 +1276,7 @@ MonoBehaviour:
   - 3
   - 4
   index: 0
+  clearedStage: 0
 --- !u!1 &1779212234
 GameObject:
   m_ObjectHideFlags: 0

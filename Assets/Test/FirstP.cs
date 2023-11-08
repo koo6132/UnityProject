@@ -26,7 +26,7 @@ public class FirstP : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         mspeed = 0;
         yield return new WaitForSeconds(0.5f);
-        mspeed = 5000.0f;
+        mspeed = 500.0f;
     }
 
     // Update is called once per frame

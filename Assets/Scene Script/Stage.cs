@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Stage : MonoBehaviour
 {
     
-    public int clearedStage;
     public Image stageImage;
     public Text stageNameText ;
     public Button startButton;
@@ -15,18 +14,19 @@ public class Stage : MonoBehaviour
     private string[] stageName = { "1", "2", "3", "4" };
     public int index= 0;
     public static Stage instance;
+    public int clearedStage;
+
     private void Awake()
     {
-        if (PlayerPrefs.GetInt("PlayerStage") < 0 || PlayerPrefs.GetInt("PlayerStage") >4)
+        if (PlayerPrefs.GetInt("PlayerStage") < 0 || PlayerPrefs.GetInt("PlayerStage") > 4)
         {
-            clearedStage = 0;
-            PlayerPrefs.SetInt("PlayerStage", 0);
+            clearedStage = 1;
+            PlayerPrefs.SetInt("PlayerStage", 1);
         }
         else clearedStage = PlayerPrefs.GetInt("PlayerStage");
     }
 
-
-private void Start()
+    private void Start()
     {
       
          index = GameManager.instance.stage; 
@@ -39,7 +39,9 @@ private void Start()
         if (index >= stageName.Length)
         {
             index = 0;
+            Debug.Log(index);
         }
+        Debug.Log(index);
     }
 
     public void onClickBackStage()
@@ -47,12 +49,15 @@ private void Start()
         index--;
         if (index < 0)
         {
-            index =stageName.Length-1;
+            index = stageName.Length - 1;
+            Debug.Log(index);
         }
+        Debug.Log(index);
     }
     private void Update()
     {
-            stageNameText.text = stageName[index];
+        
+        stageNameText.text = stageName[index];
         if (index > clearedStage)
         {
             startButton.interactable = false;

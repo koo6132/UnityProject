@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 0}
-  Level: 1
+  Level: 0
   stage: 0
 --- !u!1 &484512535
 GameObject:

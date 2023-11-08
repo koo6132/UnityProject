@@ -15,7 +15,11 @@ public class Main: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            PlayerPrefs.SetInt("PlayerStage", 0);
+            Debug.Log("스테이지 초기화하였습니다.");
+        }
     }
     public void OnRetry()
     {
