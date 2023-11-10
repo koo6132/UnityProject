@@ -7,12 +7,15 @@ public class trigger : MonoBehaviour
 {
     public event Action onTriggerEnterEvent;
     public event Action onTriggerExitEvent;
+    
 
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("11111111111");
         onTriggerEnterEvent?.Invoke();
     }
+
+    
 
     private void OnCollisionExit(Collision collision)
     {

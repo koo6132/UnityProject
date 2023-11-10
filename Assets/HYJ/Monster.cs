@@ -27,6 +27,7 @@ public class Monster : MonoBehaviour
     {
         // 트리거 이벤트에 대한 이벤트 핸들러 설정
         tr.onTriggerEnterEvent += ActiveObj; // 트리거에 진입할 때 활성화 이벤트에 대한 핸들러 추가
+        
         tr.onTriggerExitEvent += InactiveObj; // 트리거에서 나올 때 비활성화 이벤트에 대한 핸들러 추가
         trigrrer.onTriggerTimeEnterEvent += TriggerTime;
 
@@ -40,7 +41,12 @@ public class Monster : MonoBehaviour
         
     }
 
-   
+    private void Tr_onTriggerStayEvent()
+    {
+        throw new NotImplementedException();
+    }
+
+
 
     // Update 함수는 매 프레임마다 호출됩니다.
     void Update()
@@ -65,7 +71,7 @@ public class Monster : MonoBehaviour
     // onTriggerEnter 이벤트에 대한 활성화 함수
     public void ActiveObj()
     {
-        //Speed = 1f; // 트리거 진입시 몬스터의 이동 속도를 1f로 변경
+        Speed = 5f; // 트리거 진입시 몬스터의 이동 속도를 1f로 변경
         Debug.Log("실행됨"); // 디버그 메시지 출력
         aaa =true;
     }
