@@ -43,8 +43,18 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Floor")
-            Isjump = false;
+        if (collision.gameObject.tag == "Floor")
+            { Isjump = false; }
+
+        if (collision.gameObject.tag == "Kill")
+        {
+            //SceneManager.LoadScene("Level" + (manager.Level).ToString());
+        }
+
 
     }
+<<<<<<< Updated upstream:Assets/Test/PlayerMove.cs
+=======
+
+>>>>>>> Stashed changes:Assets/Script/PlayerMove.cs
 }
