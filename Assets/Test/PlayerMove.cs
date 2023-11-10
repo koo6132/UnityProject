@@ -47,7 +47,12 @@ public class PlayerMove : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Floor")
-            Isjump = false;
+        { Isjump = false; }
+       
+        //if (collision.gameObject.tag == "Kill")
+        //    {
+        //        SneManager.LoadScene("Level" + (manager.Level).ToString());
+        //    }
 
     }
     
