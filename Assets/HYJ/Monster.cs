@@ -14,21 +14,24 @@ public class Monster : MonoBehaviour
     private Transform PlayerTR; // 플레이어의 트랜스폼
     private Transform MOM;
     private NavMeshAgent agent; // 몬스터의 NavMeshAgent
-    public trigger tr; // 트리거 클래스
+    public List<trigger> trList; // 트리거 클래스
     public trtr trigrrer;
     private bool aaa = false;
     public float MonsterStop = 2; //몬스터 정지시간
-
 
    
 
     // Start 함수는 첫 번째 프레임 업데이트 전에 호출됩니다.
     void Start()
     {
+        trList.ForEach(tr => {
+            tr.onTriggerEnterEvent += ActiveObj; // 트리거에 진입할 때 활성화 이벤트에 대한 핸들러 추가
+
+            tr.onTriggerExitEvent += InactiveObj; // 트리거에서 나올 때 비활성화 이벤트에 대한 핸들러 추가
+        });
+
         // 트리거 이벤트에 대한 이벤트 핸들러 설정
-        tr.onTriggerEnterEvent += ActiveObj; // 트리거에 진입할 때 활성화 이벤트에 대한 핸들러 추가
-        
-        tr.onTriggerExitEvent += InactiveObj; // 트리거에서 나올 때 비활성화 이벤트에 대한 핸들러 추가
+       
         trigrrer.onTriggerTimeEnterEvent += TriggerTime;
 
 
