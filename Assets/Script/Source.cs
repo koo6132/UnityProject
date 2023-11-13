@@ -1,25 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class Source : MonoBehaviour
 {
-    public AudioMixer mixer;
     public static Source instance;
-   
     // Start is called before the first frame update
+    public AudioSource mse;
+    public AudioSource cat;
 
-
-    void Awake()
-    {
+   void Awake()
+    { 
 
     }
-    
-
-    
-    public void BGSoundVolume(float val)
+    public void SetMusicVolume(float volume) 
     {
-        mixer.SetFloat("BGSound", Mathf.Log10(val) * 20);
+        mse.volume = volume;
+    }
+    public void SetMusicCatVolume(float volume)
+    {
+        cat.volume = volume;
+    }
+
+    public void OnSfx() 
+    { 
+        cat.Play();
     }
 }

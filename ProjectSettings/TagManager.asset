@@ -7,7 +7,6 @@ TagManager:
   - Portal
   - Temporary
   - Floor
-  - BGM
   layers:
   - Default
   - TransparentFX
