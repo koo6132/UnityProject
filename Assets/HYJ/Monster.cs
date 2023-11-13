@@ -72,8 +72,13 @@ public class Monster : MonoBehaviour
     public void ActiveObj()
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         Speed = 5f; // 트리거 진입시 몬스터의 이동 속도를 1f로 변경
         Debug.Log("실행됨"); // 디버그 메시지 출력
+=======
+        Speed +=1 ; // 트리거 진입시 몬스터의 이동 속도를 1f로 변경
+        Debug.Log("쫒아옴 속도 = "+Speed); // 디버그 메시지 출력
+>>>>>>> Stashed changes
 =======
         Speed +=1 ; // 트리거 진입시 몬스터의 이동 속도를 1f로 변경
         Debug.Log("쫒아옴 속도 = "+Speed); // 디버그 메시지 출력

@@ -129,7 +129,10 @@ Transform:
   m_PrefabInstance: {fileID: 5378942752374386592}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &117121999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -790,7 +793,10 @@ CanvasRenderer:
   m_GameObject: {fileID: 330012471}
   m_CullTransparentMesh: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &344178826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,6 +2439,9 @@ MonoBehaviour:
   blueMat: {fileID: 2100000, guid: 079d6de97de49e74dab3f61679507bc1, type: 2}
   tr: {fileID: 473230706}
   A: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &1181609304
 GameObject:
@@ -2803,6 +2812,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a89ce26680c0be47892ffc67b96499e, type: 3}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &1560595133
 GameObject:
@@ -2924,7 +2936,10 @@ BoxCollider:
   m_Size: {x: 1.0000004, y: 1.0000005, z: 0.20000005}
   m_Center: {x: 0.00000011920929, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1595856721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3441,12 +3456,15 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!4 &1998782010 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4031852592219187888, guid: a0db7f048a9ccd3418cc76708bc2c06c, type: 3}
   m_PrefabInstance: {fileID: 1849006869}
   m_PrefabAsset: {fileID: 0}
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &2060364203
 GameObject:
   m_ObjectHideFlags: 0
@@ -3900,6 +3918,9 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093556271}
   m_Mesh: {fileID: 4300000, guid: ff91496e86166bd46b6c5025fc4cbf54, type: 3}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &2097162087
 GameObject:
@@ -4094,7 +4115,11 @@ PrefabInstance:
     - target: {fileID: 8953397409348270406, guid: d1e65c39a4d558a4fb664f31671cb615, type: 3}
       propertyPath: m_LocalPosition.z
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: -26.2
+=======
+      value: -27.18
+>>>>>>> Stashed changes
 =======
       value: -27.18
 >>>>>>> Stashed changes
@@ -4208,7 +4233,10 @@ SceneRoots:
   - {fileID: 835534500}
   - {fileID: 1849006869}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
   - {fileID: 1024338981}
   - {fileID: 117121999}
   - {fileID: 919893853}
@@ -4224,4 +4252,7 @@ SceneRoots:
   - {fileID: 1469339550}
   - {fileID: 1595856721}
   - {fileID: 2093923849}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
