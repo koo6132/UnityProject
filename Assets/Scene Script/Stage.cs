@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Stage : MonoBehaviour
 {
-    
+    public GameObject mainbgm;
     public Image stageImage;
     public Text stageNameText ;
     public Button startButton;
@@ -66,10 +67,14 @@ public class Stage : MonoBehaviour
         {
             startButton.interactable = true;
         }
-
+        
     }
     public void onClickStartButton()
     {
+        PlayerPrefs.SetFloat("BGM", MainbgmManager.instance.audioSource.volume);
+        MainbgmManager.instance.audioSource.volume = 0;
+         
+        
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;

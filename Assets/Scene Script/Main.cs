@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Main: MonoBehaviour
 {
+    public GameObject gameobject;
     public int index;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class Main: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.F1))
         {
             PlayerPrefs.SetInt("PlayerStage", 0);
@@ -45,6 +47,9 @@ public class Main: MonoBehaviour
     }
     public void OnMain()
     {
+        SoundManager.instance.BgSoundPlay(null);
+        MainbgmManager.instance.audioSource.volume = PlayerPrefs.GetFloat("BGM");
+        MainbgmManager.instance.audioSource.Play();
         SceneManager.LoadScene("Main");
         
     }
@@ -55,6 +60,7 @@ public class Main: MonoBehaviour
     public void OnOption()
     {
         SceneManager.LoadScene("Option");
+       
     }
     public void OnClickExit()
     {
