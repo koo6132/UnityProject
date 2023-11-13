@@ -9,6 +9,7 @@ public class button : MonoBehaviour
     public AudioSource b;
     public event Action onTriggerButton;
     public GameObject UiButton;
+    int a = 0;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class button : MonoBehaviour
     }
     private void OnCollisionStay(Collision collision)
     {
+        if(a==0)
         if (collision.gameObject.CompareTag("Player")) 
         {
             UiButton.SetActive(true);
@@ -26,6 +28,7 @@ public class button : MonoBehaviour
                 b.Play();
                 onTriggerButton?.Invoke();
                 UiButton.SetActive(false);
+                a++;
 
             }
         }
