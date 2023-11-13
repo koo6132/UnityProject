@@ -2418,10 +2418,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bpObj: {fileID: 2095824107}
-  redMat: {fileID: 2100000, guid: 408a29e588bb6cc448baffdc6017d22d, type: 2}
-  blueMat: {fileID: 2100000, guid: 079d6de97de49e74dab3f61679507bc1, type: 2}
+  zememat: {fileID: 2100000, guid: 9c2b6cfe8363d9f48918229e08f1fa26, type: 2}
+  redmat: {fileID: 2100000, guid: 408a29e588bb6cc448baffdc6017d22d, type: 2}
+  bulemat: {fileID: 2100000, guid: 079d6de97de49e74dab3f61679507bc1, type: 2}
   tr: {fileID: 473230706}
-  A: 0
 --- !u!1 &1181609304
 GameObject:
   m_ObjectHideFlags: 0
