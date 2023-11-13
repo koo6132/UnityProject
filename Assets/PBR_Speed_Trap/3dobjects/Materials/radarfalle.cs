@@ -6,17 +6,18 @@ using UnityEngine;
 public class radarfalle : MonoBehaviour
 {
     public MeshRenderer bpObj;
-    public Material redMat;
-    public Material blueMat;
+    public Material zememat;
+    public Material redmat;
+    public Material bulemat;
     public button tr;
    
-    public int A;
+   
     // Start is called before the first frame update
     void Start()
     {
-        bpObj = GetComponent<MeshRenderer>();
-        tr.onTriggerButton += ChangeMatToNormal;
         
+        tr.onTriggerButton += ChangeMatToNormal;
+
 
 
 
@@ -26,6 +27,10 @@ public class radarfalle : MonoBehaviour
     // Update is called once per frame
     public void ChangeMatToNormal()
     {
+        Material[] mat = this.GetComponent<Renderer>().materials;
+        mat[1] = bulemat;
+        this.GetComponent<Renderer>().materials = mat; 
+        
         Debug.Log("æ»≥Á«œººø‰");
         
     }
