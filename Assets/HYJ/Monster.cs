@@ -14,21 +14,34 @@ public class Monster : MonoBehaviour
     private Transform PlayerTR; // 플레이어의 트랜스폼
     private Transform MOM;
     private NavMeshAgent agent; // 몬스터의 NavMeshAgent
-    public trigger tr; // 트리거 클래스
+    public List<trigger> trList; // 트리거 클래스
+    public List<ConcealTr> conoealTr;
+    public button buttonTr;
     public trtr trigrrer;
     private bool aaa = false;
     public float MonsterStop = 2; //몬스터 정지시간
-
 
    
 
     // Start 함수는 첫 번째 프레임 업데이트 전에 호출됩니다.
     void Start()
     {
+        trList.ForEach(tr => {
+            tr.onTriggerEnterEvent += ActiveObj; // 트리거에 진입할 때 활성화 이벤트에 대한 핸들러 추가
+            
+            tr.onTriggerExitEvent += InactiveObj; // 트리거에서 나올 때 비활성화 이벤트에 대한 핸들러 추가
+        });
+
+        conoealTr.ForEach(tr =>
+        {
+            tr.onTriggerEnterConceal += ActiveConceal;
+        });
+
+        buttonTr.onTriggerButton += ActiveObj;
+
+
         // 트리거 이벤트에 대한 이벤트 핸들러 설정
-        tr.onTriggerEnterEvent += ActiveObj; // 트리거에 진입할 때 활성화 이벤트에 대한 핸들러 추가
-        
-        tr.onTriggerExitEvent += InactiveObj; // 트리거에서 나올 때 비활성화 이벤트에 대한 핸들러 추가
+
         trigrrer.onTriggerTimeEnterEvent += TriggerTime;
 
 
@@ -51,10 +64,8 @@ public class Monster : MonoBehaviour
     // Update 함수는 매 프레임마다 호출됩니다.
     void Update()
     {
-        if (MOM == null) 
-        {
-            aaa = true;
-        }
+        MOM = GameObject.FindWithTag("Temporary").GetComponent<Transform>();
+       
         // 에이전트의 속도 설정
         agent.speed = Speed; // 몬스터의 이동 속도 설정
         if (aaa == true)
@@ -63,7 +74,6 @@ public class Monster : MonoBehaviour
         }
         else
         {
-            MOM = GameObject.FindWithTag("MOM").GetComponent<Transform>();
             agent.destination = MOM.position;
         }
     }
@@ -71,20 +81,19 @@ public class Monster : MonoBehaviour
     // onTriggerEnter 이벤트에 대한 활성화 함수
     public void ActiveObj()
     {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        Speed = 5f; // 트리거 진입시 몬스터의 이동 속도를 1f로 변경
-        Debug.Log("실행됨"); // 디버그 메시지 출력
-=======
         Speed +=1 ; // 트리거 진입시 몬스터의 이동 속도를 1f로 변경
         Debug.Log("쫒아옴 속도 = "+Speed); // 디버그 메시지 출력
->>>>>>> Stashed changes
-=======
-        Speed +=1 ; // 트리거 진입시 몬스터의 이동 속도를 1f로 변경
-        Debug.Log("쫒아옴 속도 = "+Speed); // 디버그 메시지 출력
->>>>>>> Stashed changes
         aaa =true;
     }
+
+    public void ActiveConceal() 
+    {
+        Debug.Log("돌아감");
+        aaa = false;
+    }
+
+
+
 
     // onTriggerExit 이벤트에 대한 비활성화 함수
     public void InactiveObj()
@@ -98,14 +107,10 @@ public class Monster : MonoBehaviour
         StartCoroutine(StopForSeconds(MonsterStop)); // 5초간 정지하는 코루틴을 실행
     }
     private IEnumerator StopForSeconds(float seconds)
-    {
-       
+    { 
         agent.isStopped = true;
         yield return new WaitForSecondsRealtime(seconds); // 지정된 시간 동안 대기합니다.
         agent.isStopped = false;
-       
-
-        
     }
 }
 
