@@ -26,7 +26,7 @@ public class Pause : MonoBehaviour
     public void Re()
     {
 
-    if (Input.GetKeyDown(KeyCode.Escape))
+    if (Input.GetKey(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -35,7 +35,7 @@ public class Pause : MonoBehaviour
         isPause = false;
         Time.timeScale = 1;
         Canvas.SetActive(false);
-       
+       SoundManager.instance.bgsound.Play();
     }
 
     public void stop()
@@ -49,6 +49,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 0;
         Canvas.SetActive(true);
         isPause = true;
+        SoundManager.instance.bgsound.Pause();
         
     }
 }
