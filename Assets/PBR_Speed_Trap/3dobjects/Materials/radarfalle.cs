@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,18 @@ public class radarfalle : MonoBehaviour
     public Material bulemat;
     public button tr;
    
+<<<<<<< Updated upstream
    
     // Start is called before the first frame update
     void Start()
     {
+=======
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        tr.onTriggerButton += ChangeMatToNormal;
+>>>>>>> Stashed changes
         
         tr.onTriggerButton += ChangeMatToNormal;
 
@@ -28,9 +37,14 @@ public class radarfalle : MonoBehaviour
     public void ChangeMatToNormal()
     {
         Material[] mat = this.GetComponent<Renderer>().materials;
+<<<<<<< Updated upstream
         mat[1] = bulemat;
         this.GetComponent<Renderer>().materials = mat; 
         
+=======
+        mat[1] = blueMat;
+        this.GetComponent<Renderer>().materials = mat;
+>>>>>>> Stashed changes
         Debug.Log("æ»≥Á«œººø‰");
         
     }
