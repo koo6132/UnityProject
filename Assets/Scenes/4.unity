@@ -6037,17 +6037,6 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-<<<<<<< Updated upstream
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: def254c27f3e44f468291c1a9360c4fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bpObj: {fileID: 2095824107}
-  zememat: {fileID: 2100000, guid: 9c2b6cfe8363d9f48918229e08f1fa26, type: 2}
-  redmat: {fileID: 2100000, guid: 408a29e588bb6cc448baffdc6017d22d, type: 2}
-  bulemat: {fileID: 2100000, guid: 079d6de97de49e74dab3f61679507bc1, type: 2}
-  tr: {fileID: 473230706}
-=======
   serializedVersion: 3
   m_Size: {x: 0.39064622, y: 0.7032923, z: 0.42530364}
   m_Center: {x: 0.008812122, y: 0.33335015, z: 0}
@@ -6056,7 +6045,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4031852592219187888, guid: a0db7f048a9ccd3418cc76708bc2c06c, type: 3}
   m_PrefabInstance: {fileID: 1562565764}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &1181609304
 GameObject:
   m_ObjectHideFlags: 0
