@@ -36,6 +36,7 @@ public class SoundManager : MonoBehaviour
         {
             if(arg0.name == bglist[i].name)
                 BgSoundPlay(bglist[i]);
+            
         }
     }
 
