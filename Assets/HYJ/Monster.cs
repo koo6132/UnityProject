@@ -15,7 +15,7 @@ public class Monster : MonoBehaviour
     private Transform MOM;
     private NavMeshAgent agent; // 몬스터의 NavMeshAgent
     public List<trigger> trList; // 트리거 클래스
-    public List<ConcealTr> conoealTr;
+    //public ConcealTr conoealTr;
     public button buttonTr;
     public trtr trigrrer;
     private bool aaa = false;
@@ -32,10 +32,10 @@ public class Monster : MonoBehaviour
             tr.onTriggerExitEvent += InactiveObj; // 트리거에서 나올 때 비활성화 이벤트에 대한 핸들러 추가
         });
 
-        conoealTr.ForEach(tr =>
-        {
-            tr.onTriggerEnterConceal += ActiveConceal;
-        });
+        //conoealTr.ForEach(tr =>
+        //{
+        //    tr.onTriggerEnterConceal += ActiveConceal;
+        //});
 
         buttonTr.onTriggerButton += ActiveObj;
 

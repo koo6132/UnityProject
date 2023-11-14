@@ -18,23 +18,15 @@ public class AAA : MonoBehaviour
         
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.name == "Kill")
-    //    {
-    //        OFF.SetActive(false);
-    //        ON.SetActive(true);
-    //    }
-    //}
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(other.gameObject.name == "Kill")
+        if (collision.gameObject.name == "Kill")
         {
             OFF.SetActive(false);
             ON.SetActive(true);
         }
     }
+
 
 
 }
