@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class GameManager : MonoBehaviour
     public GameObject Canvas;
     public int Level;
     public int stage;
-   
     void Awake()
     {
         
@@ -25,6 +25,6 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    
 
+    
 }
