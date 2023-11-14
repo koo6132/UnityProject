@@ -24,14 +24,17 @@ public class SoundSlider : MonoBehaviour
     }
     public void BGMVolume()
     {
-        SoundManager.instance.bgsound.volume = BGMSlider.value; 
+        SoundManager.instance.bgsound.volume = BGMSlider.value;
+        PlayerPrefs.SetFloat("BGMv", BGMSlider.value);
     }
     public void MainVolume()
     {
         MainbgmManager.instance.audioSource.volume = BGMSlider.value;
+        PlayerPrefs.SetFloat("BGMv", BGMSlider.value);
     }
     public void SFXVolume()
     {
        SFXManager.instance.SFX.volume = SFXSlider.value;
+        PlayerPrefs.SetFloat("SFXv", SFXSlider.value);
     }
 }

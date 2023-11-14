@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     bool isPause;
-    public GameObject Canvas;
+    
     public int Level;
     public int stage;
     void Awake()

@@ -17,8 +17,8 @@ public class Main: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            PlayerPrefs.SetInt("PlayerStage", 0);
-            Debug.Log("스테이지 초기화하였습니다.");
+            PlayerPrefs.SetInt("PlayerStage", 4);
+            Debug.Log("개발자모드 작동하였습니다.");
         }
     }
     public void OnRetry()
@@ -30,7 +30,7 @@ public class Main: MonoBehaviour
         switch (index)
         {
             case 0:
-                SceneManager.LoadScene("1");
+                SceneManager.LoadScene("1_1");
                 break;
             case 1:
                 SceneManager.LoadScene("2");
@@ -45,8 +45,15 @@ public class Main: MonoBehaviour
     }
     public void OnMain()
     {
+       MainbgmManager.instance.audioSource.volume= PlayerPrefs.GetFloat("BGM");
+        MainbgmManager.instance.audioSource.Play();
+        SoundManager.instance.bgsound.clip = null;
         SceneManager.LoadScene("Main");
         
+    }
+    public void OnKey()
+    {
+        SceneManager.LoadScene("Key");
     }
     public void OnChapter()
     {
@@ -54,6 +61,7 @@ public class Main: MonoBehaviour
     }
     public void OnOption()
     {
+       
         SceneManager.LoadScene("Option");
     }
     public void OnClickExit()
