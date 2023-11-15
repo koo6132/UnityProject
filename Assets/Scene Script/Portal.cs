@@ -11,7 +11,7 @@ public class Portal : MonoBehaviour
     public int stage;
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
