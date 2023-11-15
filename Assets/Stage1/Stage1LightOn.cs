@@ -6,13 +6,13 @@ public class Stage1LightOn : MonoBehaviour
 {
 
     public GameObject B;
-    AudioSource audio;
     private bool hasPlayed = false;
+    AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
-        B.SetActive(false);
         audio = GetComponent<AudioSource>();
+        B.SetActive(false);
     }
 
     // Update is called once per frame

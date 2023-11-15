@@ -11,6 +11,7 @@ public class Stage1StartMusic : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
+        audio.loop = false;
     }
 
     // Update is called once per frame

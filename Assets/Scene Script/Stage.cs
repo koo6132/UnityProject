@@ -70,6 +70,9 @@ public class Stage : MonoBehaviour
     }
     public void onClickStartButton()
     {
+        PlayerPrefs.SetFloat("BGM", MainbgmManager.instance.audioSource.volume);
+        MainbgmManager.instance.audioSource.volume = 0;
+
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
@@ -78,7 +81,7 @@ public class Stage : MonoBehaviour
         switch (index)
         {
             case 0:
-                SceneManager.LoadScene("1");
+                SceneManager.LoadScene("1_1");
                 break;
             case 1:
                 SceneManager.LoadScene("2");

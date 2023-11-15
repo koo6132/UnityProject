@@ -8,7 +8,7 @@ public class Portal : MonoBehaviour
     public int saveStage;
     public static  Portal instance;
     public int playerstage;
-    public int stage;
+    public string stage;
     void Start()
     {
        
@@ -23,12 +23,17 @@ public class Portal : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            if (saveStage == 1)
+            {
+                SceneManager.LoadScene(stage);
+                PlayerPrefs.SetInt("PlayerStage", playerstage);
+                Debug.Log("³ª°¬½À´Ï´Ù");
+            }
             SceneManager.LoadScene(stage);
-            PlayerPrefs.SetInt("PlayerStage", playerstage);
             Debug.Log("³ª°¬½À´Ï´Ù");
-            
+
         }
-        
+
     }
 }
 
