@@ -25,4 +25,6 @@ public class Kill : MonoBehaviour
             Debug.Log("2¹ø");
         }
     }
+
+    
 }

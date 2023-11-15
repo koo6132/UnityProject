@@ -83,7 +83,7 @@ public class Monster : MonoBehaviour
     // onTriggerEnter 이벤트에 대한 활성화 함수
     public void ActiveObj()
     {
-        Speed += 0.8f ; // 트리거 진입시 몬스터의 이동 속도를 1f로 변경
+        Speed += 0.4f ; // 트리거 진입시 몬스터의 이동 속도를 1f로 변경
         Debug.Log("쫒아옴 속도 = "+Speed); // 디버그 메시지 출력
         aaa =true;
     }
