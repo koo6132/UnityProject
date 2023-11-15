@@ -419,7 +419,11 @@ Transform:
   - {fileID: 1694388104871467651}
   - {fileID: 1694388105159416148}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 5438321116223944530}
+=======
+  - {fileID: 4588313785131321754}
+>>>>>>> Stashed changes
 =======
   - {fileID: 4588313785131321754}
 >>>>>>> Stashed changes
@@ -446,6 +450,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!114 &5325469732316739988
 MonoBehaviour:
@@ -545,6 +550,8 @@ CapsuleCollider:
   m_Height: 1.64
   m_Direction: 1
   m_Center: {x: 0, y: 0.78, z: 0}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!1 &1694388104871626411
@@ -2362,6 +2369,7 @@ SkinnedMeshRenderer:
     m_Extent: {x: 0.0054057, y: 0.0071506803, z: 0.001985626}
   m_DirtyAABB: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &8624777498418237866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,6 +2406,8 @@ Transform:
 --- !u!20 &2175006205531173872
 Camera:
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &12111067948004211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2534,11 +2544,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &4612905517742045851
 Rigidbody:
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_GameObject: {fileID: 8624777498418237866}
   m_Enabled: 1
@@ -2594,6 +2608,8 @@ AudioListener:
   m_GameObject: {fileID: 8624777498418237866}
   m_Enabled: 1
 =======
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 8810652590023119877}
   serializedVersion: 4
   m_Mass: 1
@@ -2620,4 +2636,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4777606630871252, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
   m_PrefabInstance: {fileID: 8810789291941811785}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
